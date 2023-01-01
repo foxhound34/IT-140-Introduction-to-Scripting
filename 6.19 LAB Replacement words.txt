@@ -1,0 +1,24 @@
+# Make and empty list
+my_list = []
+
+# Obtain the first user input and split words into individual strings
+user_input = input()
+words = user_input.split()
+
+# Obtain the sentence to be changed
+sentence = input()
+
+# Iterate word over the words variable and append the empty list
+for word in words:
+    my_list.append(word)
+    
+# I split the list into two new lists 1) that contained the keys and 2) contained the values
+# I then combined the two lists and converted to a dictionary.
+key = my_list[::2]
+value = my_list[1::2]
+new_dict = dict(zip(key, value))
+
+# I'm using two variables in the dictionary items and then replacing the old words with the new words.
+for old, new in new_dict.items():
+    sentence = sentence.replace(old, new)
+print(sentence)

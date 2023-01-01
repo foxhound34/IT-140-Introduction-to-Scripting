@@ -1,0 +1,14 @@
+# Make and empty list
+my_list = []
+
+# Obtain user input and split them into strings
+user_input = input()
+words = user_input.split()
+
+# Iterate word over the words variable and append the empty list
+for word in words:
+    my_list.append(word)
+
+# Iterate i over the list and print i and the count of i from the list 
+for i in my_list:
+    print(i, my_list.count(i))

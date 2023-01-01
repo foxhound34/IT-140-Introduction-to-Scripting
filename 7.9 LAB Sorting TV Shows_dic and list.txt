@@ -1,0 +1,55 @@
+# imports a default dictionary
+from collections import defaultdict
+
+# takes file as input and stores it in a variable
+user_input = input()
+
+#opens, reads and then closes the text file
+with open(user_input, 'r') as f:
+    file = (f.readlines())
+
+# Empty lists and the dictionary
+dictionary = defaultdict(list)
+list_key = []
+list_value = []
+show_name = []
+
+# iterates, strips the new line and appends the empty list with the key words
+for element in range(len(file)):
+    if element % 2 == 0:
+        key = file[element].strip('\n')
+        list_key.append(key)
+# Strips new lines and adds values to a new list
+    else:
+        value = file[element].strip('\n')
+        list_value.append(value)
+
+# combines the two lists into a key:value pair dictionary and sorts the dictionary by key
+for key, value in zip(list_key, list_value):
+    dictionary[key].append(value)
+    combined = dict(dictionary)
+    sorted_keys = sorted(combined.keys())
+
+# Empty variable for the output later
+output_keys = ''
+
+# iterates over sorted dictionary and adds them to our empty variable with the appropriate ':' and new lines
+for k in sorted_keys:
+    output_keys += str(int(k)) + ': '
+    for v in combined[k]:
+        output_keys += v + '; '
+        show_name.append(v)
+    output_keys = str(output_keys[:-2]+ '\n')
+    
+    
+# Creates a new text file to write to
+with open('output_keys.txt', 'w') as g:
+    g.write(output_keys)
+    
+# Sorts the show name list
+show_name.sort()
+
+# Opens a new text file to write to and writes the contents as a string with new lines.
+with open('output_titles.txt', 'w') as h:
+    for n in show_name:
+        h.write('%s\n' % n)

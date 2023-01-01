@@ -1,0 +1,19 @@
+#Stores user input into variable and splits into list, then slices every input at index one.
+user_input = input()
+name_list = user_input.split()
+slice_name = slice(1)
+
+#Checks length of list and places each entry into new variable
+#slices all entries at index 1 if needed and then ouputs only selected slices with concatenations
+if len(name_list) == 3:
+    first_name = name_list[0]
+    middle_name = name_list[1]
+    last_name = name_list[2]   
+    print(last_name+',', first_name[slice_name]+'.'+ middle_name[slice_name]+'.')
+    
+#If no middle name exists then the else operation is performed as described simlilary to if statement.
+#Alternatively a second if len(name_list) == 2 could also be used
+else:
+    first_name = name_list[0]
+    last_name = name_list[1]
+    print(last_name+',', first_name[slice_name]+'.')

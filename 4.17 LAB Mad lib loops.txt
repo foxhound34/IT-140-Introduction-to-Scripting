@@ -1,0 +1,12 @@
+# Having the input statement inside the loop and setting it to be True will run the loop indefinately until
+#we give the break command
+while True:
+    
+#found this neat little piece of code for multiple inputs.
+    x,y = input().split()
+#This if statement sets our break from the loop conditions    
+    if x == 'quit' and y == '0':
+        break
+# The print statement is formated to place the second input first. Putting the inputs into a list and using reversed()
+# may have also work, but i did not test it.
+    print('Eating {} {} a day keeps the doctor away.'.format(y,x))

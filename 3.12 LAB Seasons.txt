@@ -1,0 +1,60 @@
+#Obtain inputs and place in variables.
+input_month = input()
+input_day = int(input())
+
+#Made a list of months so that I could check the input_month against it for invalid entries.
+lst = ('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December')
+
+#Set the invalid statements first. If input for month was not found in list then entry is invalid. 
+#Days with inputs less than or equal to zero are set to invalid.
+if input_month not in lst:
+    print("Invalid")
+if input_day <= 0:
+    print("Invalid")
+    
+# Statements to select out mismatched months and days. Their must be a way to pair this down or combine things
+#but I could't figure out how.
+elif input_month == 'January' and input_day > 31:
+    print('Invalid')
+elif input_month == 'February' and input_day > 29:
+    print('Invalid')
+elif input_month == 'March' and input_day > 31:
+    print('Invalid')
+elif input_month == 'April' and input_day > 30:
+    print('Invalid')
+elif input_month == 'May' and input_day > 31:
+    print('Invalid')
+elif input_month == 'June' and input_day > 30:
+    print('Invalid')
+elif input_month == 'July' and input_day > 31:
+    print('Invalid')
+elif input_month == 'August' and input_day > 31:
+    print('Invalid')
+elif input_month == 'September' and input_day > 30:
+    print('Invalid')
+elif input_month == 'October' and input_day > 31:
+    print('Invalid')
+elif input_month == 'November' and input_day > 30:
+    print('Invalid')
+elif input_month == 'December' and input_day > 31:
+    print('Invalid')
+
+#Statments for months that are contained in only one season
+elif input_month == 'January' or input_month =='February':
+    print('Winter')
+elif input_month == 'April' or input_month == 'May':
+    print('Spring')
+elif input_month == 'July' or input_month == 'August':
+    print('Summer')
+elif input_month == 'October' or input_month == 'November':
+    print('Autumn')
+    
+#statements for months that fall into two seasons by day separation
+elif input_month == 'March' and input_day >=20 or input_month == 'June' and input_day <=20:
+    print('Spring')
+elif input_month == 'June' and input_day >=21 or input_month == 'September' and input_day <=21:
+    print('Summer')
+elif input_month == 'September' and input_day >=22 or input_month == 'December' and input_day <=20:
+    print('Autumn')
+elif input_month == 'December' and input_day >=21 or input_month == 'March' and input_day <=19:
+    print('Winter')

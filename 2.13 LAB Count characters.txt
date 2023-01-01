@@ -1,0 +1,10 @@
+#Asks for user input and place into a variable
+input_string = input()
+
+#Takes the character at index 0 and places it in a new variable.
+# [2:] takes everything from index 2 to the end of the input and places it into a new variable
+char = input_string[0]
+word = input_string[2:]
+
+#Outputs how many of the characters are in the word or phrase using the .count() function
+print(word.count(char))

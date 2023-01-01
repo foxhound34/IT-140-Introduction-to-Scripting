@@ -1,0 +1,8 @@
+''' Type your code here. '''
+user_num1 = int(input())
+user_num2 = int(input())
+
+user_num3 = (user_num1//user_num2)
+user_num4 = (user_num3//user_num2)
+user_num5 = (user_num4//user_num2)
+print(user_num3, user_num4, user_num5)

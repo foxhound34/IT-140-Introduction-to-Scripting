@@ -1,0 +1,33 @@
+#imports the CSV function
+import csv
+
+# list of empty lists
+words_list = []
+single_list = []
+sep_list = []
+freq = []
+
+#takes the CSV file as input
+input_file = input()
+
+#The with function both opens and closes the csv file, 'r' allows us to read the CSV file
+with open (input_file, 'r') as f:
+    csvreader = csv.reader(f, delimiter = ',') # delimiter separates the words at the comma
+    
+#appends a list with the words from the csv file
+    for rows in csvreader:
+        words_list.append(rows)
+        
+# I was getting a list inside a list so I had to pull it out into this new variable, I'm sure this isn't the
+# correct way, but I spent far too long on this Lab as a whole to try and figure it out
+single_list = words_list[0]
+
+# Iterates i over list placing only new words in a new list
+for i in single_list:
+   if i not in sep_list:
+       sep_list.append(i)
+       freq.append(single_list.count(i)) #counts the frequency of words and places them in separate list
+
+# I came across the function 'zip' to print the elements of two lists at the same time.
+for x,y in zip(sep_list,freq):
+    print(x,y)

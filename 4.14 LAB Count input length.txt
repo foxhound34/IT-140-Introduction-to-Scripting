@@ -1,0 +1,16 @@
+# Obtain user input and store in variable
+user_text = input()
+
+# Set count variable to zero
+count = 0
+
+# The variable i travels across the string and counts all periods, commas, and spaces increasing the count each time
+for i in user_text:
+    if i == '.':
+        count += 1
+    elif i == ' ':
+        count += 1
+    elif i == ',':
+        count += 1
+# Display the length of the entire string and subtract the count we obtained from the for loop above.
+print(len(user_text)-count)

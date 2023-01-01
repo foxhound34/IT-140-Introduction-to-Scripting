@@ -1,0 +1,23 @@
+# Makes empty list variables
+nums = []
+pos = []
+
+# Obtains user input and splits them into tokens
+user_nums = input()
+tokens = user_nums.split()
+
+# i iterates over the tokens and appends the list nums while converting to integers
+for i in tokens:
+    nums.append(int(i))
+    
+# p iterates over the list nums and appends a new list of only positive integers.
+for p in nums:
+    if p >= 0:
+        pos.append(p)
+        
+# sorts the varibale in ascending order
+pos.sort()
+
+#iterates item through the list and prints out the numbers that have been sorted
+for item in pos:
+    print(item, end =' ')

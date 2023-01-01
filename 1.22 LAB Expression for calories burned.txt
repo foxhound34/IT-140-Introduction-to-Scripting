@@ -1,0 +1,12 @@
+''' Calories = ((Age x 0.2757) + (Weight x 0.03295) + (Heart Rate x 1.0781) — 75.4991) x Time / 8.368 '''
+
+''' Type your code here. '''
+num_age = int(input())
+num_weight = int(input())
+num_rate = int(input())
+num_time = int(input())
+
+calories0 = (num_age * 0.2757) + (num_weight * 0.03295) + (num_rate * 1.0781) -75.4991 
+calories = calories0 * (num_time / 8.368)
+
+print('Calories: {:.2f} calories'.format(calories))

@@ -1,0 +1,15 @@
+'''I had many problems with this lab, toward the end I spent far too long trying to fix whitespace errors'''
+#Obtain input and store in variables.  I added a second new line to triangle_height because I was getting an error without it
+triangle_char = input('Enter a character:\n')
+triangle_height = int(input('Enter triangle height:\n\n'))
+
+#set count to zero that we will iterate +1 with each passing of the loop.
+count = 0
+#loop will continue until count is equal to the input of the triangle height
+while count <= triangle_height:
+# I had to set the if statement to !=0 becasue passing zero through the loop gave me an single whitespace at the top of the pyramid
+    if count != 0:
+# joined each input with a space and muliplied it by the current count and concatentated a space at the end
+        print(' '.join(triangle_char * count)+ ' ')
+#increases the count with each pass of the loop
+    count += 1

@@ -1,0 +1,45 @@
+'''This lab is a great example of how defenitions can make code easier to read, but doesn't necessarily
+save you any lines of code'''
+
+# The definition is used for all the math the is needed to determine the exact change given
+def exact_change(user_total):
+    dollars = user_total // 100
+    num_dollars = user_total % 100  
+    quarter = num_dollars // 25
+    num_quarters = num_dollars % 25 
+    dime = num_quarters // 10
+    num_dimes = num_quarters % 10
+    nickel = num_dimes // 5
+    num_nickels = num_dimes // 5 
+    penny = num_nickels // 1
+    num_pennies = num_nickels % 1
+    return (dollars, quarter, dime, nickel, penny) #returns the answer back to the variables
+
+if __name__ == '__main__':
+# Obtains user input and calls the definition from above 
+    input_val = int(input())    
+    num_dollars, num_quarters, num_dimes, num_nickels, num_pennies = exact_change(input_val)
+    
+# If/elif statements to determine the print out from the above definition calculation
+    if input_val == 0:
+        print('no change')  
+    if num_dollars == 1:
+        print(num_dollars, 'dollar')
+    elif num_dollars >=1:
+        print(num_dollars, 'dollars')
+    if num_quarters == 1:
+        print(num_quarters, 'quarter')
+    elif num_quarters >=1:
+        print(num_quarters, 'quarters')
+    if num_dimes == 1:
+        print(num_dimes, 'dime')
+    elif num_dimes >=1:
+        print(num_dimes, 'dimes')
+    if num_nickels == 1:
+        print(num_nickels, 'nickel')
+    elif num_nickels >=1:
+        print(num_nickels, 'nickels')
+    if num_pennies == 1:
+        print(num_pennies, 'penny')
+    elif num_pennies >=1:
+        print(num_pennies, 'pennies')

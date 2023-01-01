@@ -1,0 +1,46 @@
+# Set user input to integer and store in variable
+change = int(input())
+# Use if statement for when input is equal to zero so no change is given.
+if change == 0:
+    print('No change')
+    
+# Output gives decimal, so you need to use // operator to give floor number.
+# Modulo (%) is used with variable to store the remainder after dollars are removed from change. 
+dollars = change // 100
+dollar_change = change % 100
+if dollars == 1:
+    print(dollars, "Dollar")
+elif dollars >=1:
+    print(dollars, 'Dollars')
+    
+# Using the modulo stored above we repeat the proceess for quarters   
+quarter = dollar_change // 25
+quarter_change = dollar_change % 25
+if quarter == 1:
+    print(quarter, 'Quarter')
+elif quarter >=1:
+    print(quarter, 'Quarters')
+ 
+# Using the modulo stored above we repeat the proceess for dimes    
+dime = quarter_change // 10
+dime_change = quarter_change % 10
+if dime == 1:
+    print(dime, 'Dime')
+elif dime >=1:
+    print(dime, 'Dimes')
+
+# Using the modulo stored above we repeat the proceess for nickels
+nickel = dime_change // 5
+nickel_change = dime_change // 5
+if nickel == 1:
+    print(nickel, 'Nickel')
+elif nickel >=1:
+    print(nickel, 'Nickels')
+
+# Using the modulo stored above we repeat the proceess for pennies    
+penny = nickel_change // 1
+penny_change = nickel_change % 1
+if penny == 1:
+    print(penny, 'Penny')
+elif penny >=1:
+    print(penny, 'Pennies')

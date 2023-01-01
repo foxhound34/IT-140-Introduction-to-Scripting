@@ -1,0 +1,16 @@
+# Defines the function of the user input integer swap.
+def swap_values(user_val1, user_val2):
+    x = user_val1
+    y = user_val2
+    return y, x #returns the swapped numbers from the function execution
+    
+
+if __name__ == '__main__':
+    user_val1 = int(input()) #obtains user input 1 and stored in variable
+    user_val2 = int(input()) #obtains user input 2 and stored in variable
+    
+# Calls the function and stores the executed code in new variables.  I found that printing the call directly
+# caused the output to be in the format (5,4). It took me a long time to figure out a fix for that, I tried strip()
+# , .format(), print(str()) and a few others.
+    output_val1, output_val2 = swap_values(user_val1, user_val2)
+    print(output_val1, output_val2)

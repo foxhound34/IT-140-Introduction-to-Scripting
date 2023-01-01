@@ -1,0 +1,19 @@
+# Makes an empty list 
+nums = []
+
+# Obtains user input and stores it in a variable
+user_num = input()
+
+# Splits the user inputs into a tuple
+tokens = user_num.split()
+
+# iterates i over the tuple, while converting string to integer, then appends the empty list 
+for i in tokens:
+    nums.append(int(i))
+
+# Calculates mean using floor operand and max function.  This section could be a definition as well
+mean = sum(nums) // len(nums)
+max_num = max(nums)
+
+# Displays mean and max of input
+print(mean, max_num)
